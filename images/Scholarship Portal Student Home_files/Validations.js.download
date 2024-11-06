@@ -1,0 +1,121 @@
+﻿function CharOnly(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+
+        return true;
+    }
+
+    else if (charCode == 8) { return true; }
+    if (charCode == 9) { return true; }
+    else { return false; }
+}
+function CharspaceOnly(evt) {
+
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+  
+    if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+
+        return true;
+    }
+    if (charCode == 8) { return true; }
+    if (charCode == 9) { return true; }
+    if (charCode == 32) { return true; }
+
+    else { return false; }
+}
+function NumberOnly(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if ((charCode >= 48 && charCode <= 57)) {
+
+        return true;
+    }
+    if (charCode == 9) { return true; }
+    if (charCode == 8) { return true; }
+    else { return false; }
+}
+function CharNumOnly(e) {
+    var k;
+    document.all ? k = e.keyCode : k = e.which;
+    
+    if ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32) { return true; }
+    else if ((k >= 48 && k <= 57)) { return true; }
+    //            if (e.keyCode == 46) { return true; }
+    //            if (e.keyCode == 37) { return true; }
+    //            if (e.keyCode == 39) { return true; }
+    if (e.keyCode == 8) { return true; }
+    if (charCode == 9) { return true; }
+    //else if (k != 46) { return true; }
+    else { return false; }
+
+}
+function CharNumEmailOnly(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+
+        return true;
+    }
+    if ((charCode >= 48 && charCode <= 57)) {
+
+        return true;
+    }
+    if (charCode == 8) { return true; }
+    if (charCode == 9) { return true; }
+    if (charCode == 64) { return true; }
+    if (charCode == 95) { return true; }
+    if (charCode == 45) { return true; }
+    if (charCode == 46) { return true; }
+    else { return false; }
+
+}
+function CharNumAddressOnly(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+     if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+
+        return true;
+    }
+    if ((charCode >= 48 && charCode <= 57)) {
+
+        return true;
+    }
+    if (charCode == 9) { return true; }
+    if (charCode == 8) { return true; }
+   
+   
+    if (charCode == 32) { return true; }
+    else { return false; }
+
+}
+function CharNumSlashOnly(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+  
+   if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+
+        return true;
+    }
+    if ((charCode >= 48 && charCode <= 57)) {
+
+        return true;
+    }
+    if (charCode == 8) { return true; }
+    if (charCode == 47) { return true; }
+    if (charCode == 92) { return true; }
+    if (charCode == 9) { return true; }
+    else { return false; }
+
+}
+function CharNumHyphenOnly(evt) {
+
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+
+        return true;
+    }
+    if ((charCode >= 48 && charCode <= 57 || charCode == 45)) {
+
+        return true;
+    }
+    if (charCode == 9) { return true; }
+    if (charCode == 8) { return true; }
+    else { return false; }
+
+}

@@ -1,0 +1,66 @@
+﻿var CONFIG = (function() {
+     var privateVD = {
+         'FOOTER': '/mmgam/MasterPages/footer.htm',
+         'QLINKS': '/mmgam/MasterPages/Qlinks.htm',
+         'NLINKS': '/mmgam/MasterPages/navlinks.htm',
+         'PORTAL': '/mmgam/Portal/Public/Portal_Main.aspx',
+         'HOME': '/mmgam/Portal.aspx',
+         'BPIU': '/mmgam/BPIU/Public/BPIU_Main.aspx',
+         'MASTERS': '/mmgam/Masters/Public/Masters_Main.aspx',
+         'DPIU': '/mmgam/DPIU/Public/DPIU_Main.aspx',
+         'SPIU': '/mmgam/SPIU/Public/SPIU_Main.aspx',
+         'SYES': '/mmgam/Inspections/Public/Inspections_Main.aspx',
+         'BKBH': '/mmgam/BankBranch/Public/BankBranch_Main.aspx',
+         'SRVCOMMON': '/mmgam/Public/WebServices/Common.asmx',
+         'SRVLOGS': '/mmgam/WebServices/Logs.asmx',
+         'SRVAGREEMENT': '/mmgam/WebServices/Agreement.asmx',
+         'SRVPROCESS': '/mmgam/WebServices/ProcessProposal.asmx',
+         'SRVINSP': '/mmgam/WebServices/Inspection.asmx',
+         'PSRVINSP': '/mmgam/Public/WebServices/Inspection.asmx',
+         'BENINFO': '/mmgam/Public/BeneficiaryInformation.htm',
+         'BSHQ': '/mmgam/BankStateHQ/Public/BankStateHQ_Main.aspx',
+         'PATH': '/mmgam/'
+     };
+    var privateSite = {
+         'FOOTER': '/MasterPages/footer.htm',
+         'QLINKS': '/MasterPages/Qlinks.htm',
+         'NLINKS': '/MasterPages/navlinks.htm',
+         'PORTAL': '/Portal/Public/Portal_Main.aspx',
+         'HOME': '/Portal.aspx',
+         'MASTERS': '/Masters/Public/Masters_Main.aspx',
+         'BPIU': '/BPIU/Public/BPIU_Main.aspx',
+         'DPIU': '/DPIU/Public/DPIU_Main.aspx',
+         'SPIU': '/SPIU/Public/SPIU_Main.aspx',
+         'SYES': '/Inspections/Public/Inspections_Main.aspx',
+         'BKBH': '/BankBranch/Public/BankBranch_Main.aspx',
+         'SRVCOMMON': '/Public/WebServices/Common.asmx',
+         'SRVLOGS': '/WebServices/Logs.asmx',
+         'SRVAGREEMENT': '/WebServices/Agreement.asmx',
+         'SRVPROCESS': '/WebServices/ProcessProposal.asmx',
+         'SRVINSP': '/WebServices/Inspection.asmx',
+         'PSRVINSP': '/Public/WebServices/Inspection.asmx',
+         'BENINFO': '/Public/BeneficiaryInformation.htm',
+         'BSHQ': '/BankStateHQ/Public/BankStateHQ_Main.aspx',
+         'PATH': '/'
+     };
+     return {
+        get: function(name) { 
+        var vdOrSite = location.pathname.split("/");
+        if (vdOrSite[1] == 'mmgam'){
+            return privateVD[name]; 
+        }
+        else
+        {
+        return privateSite[name]; 
+        }
+        }
+    };
+})();
+
+
+        
+        
+        
+        
+        
+        
